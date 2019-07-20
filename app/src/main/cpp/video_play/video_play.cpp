@@ -61,7 +61,7 @@ void init() {
     avformat_network_init();
     //封装格式上下文
     pFormatCtx2 = avformat_alloc_context();
-
+    LOGE( "inputPath %s",inputPath);
     //2.打开输入视频文件
     if (avformat_open_input(&pFormatCtx2, inputPath, NULL, NULL) != 0) {
         LOGE("%s", "打开输入视频文件失败");
@@ -182,7 +182,7 @@ void *begin(void *args) {
 }
 
 extern "C"
-JNIEXPORT void JNICALL
+JNIEXPORT jint JNICALL
 Java_com_example_binbin_myapplication_ffmpegvideoplay_Play_play(JNIEnv *env, jobject instance, jstring inputPath_) {
     inputPath = env->GetStringUTFChars(inputPath_, 0);
     init();
@@ -245,7 +245,7 @@ Java_com_example_binbin_myapplication_ffmpegvideoplay_Play_getTotalTime(JNIEnv *
     return (jint) duration;
 }
 extern "C"
-JNIEXPORT double JNICALL
+JNIEXPORT jdouble JNICALL
 Java_com_example_binbin_myapplication_ffmpegvideoplay_Play_getCurrentPosition(JNIEnv *env, jobject instance) {
     //获取音频播放时间
     return ffmpegMusic->clock;

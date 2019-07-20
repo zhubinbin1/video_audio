@@ -47,8 +47,11 @@ Java_com_ws_ffmpegandroidavfilter_MainActivity_play
     LOGD("play");
 
     // sd卡中的视频文件地址,可自行修改或者通过jni传入
-    char *file_name = "/storage/emulated/0/pauseRecordDemo/video/2018-02-03-09-25-34.mp4";
+//    char *file_name = "/storage/emulated/0/pauseRecordDemo/video/2018-02-03-09-25-34.mp4";
     //char *file_name = "/storage/emulated/0/video.avi";
+    char *file_name = "/mnt/sdcard/source.mp4";
+
+
 
     av_register_all();
 

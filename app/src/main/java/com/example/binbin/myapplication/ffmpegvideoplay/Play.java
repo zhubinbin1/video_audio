@@ -8,21 +8,33 @@ import android.view.SurfaceView;
  * Created by LC on 2017/11/20.
  */
 
-public class Play  implements SurfaceHolder.Callback {
-    static{
-        System.loadLibrary("avcodec-56");
-        System.loadLibrary("avdevice-56");
-        System.loadLibrary("avfilter-5");
-        System.loadLibrary("avformat-56");
-        System.loadLibrary("avutil-54");
-        System.loadLibrary("postproc-53");
-        System.loadLibrary("swresample-1");
-        System.loadLibrary("swscale-3");
+public class Play implements SurfaceHolder.Callback {
+    static {
+        System.loadLibrary("avcodec-57");
+        System.loadLibrary("avdevice-57");
+        System.loadLibrary("avfilter-6");
+        System.loadLibrary("avformat-57");
+        System.loadLibrary("avutil-55");
+//        System.loadLibrary("postproc-53");
+        System.loadLibrary("swresample-2");
+        System.loadLibrary("swscale-4");
         System.loadLibrary("ffmpeg_jni");
+
+//        System.loadLibrary("avcodec-56");
+//        System.loadLibrary("avdevice-56");
+//        System.loadLibrary("avfilter-5");
+//        System.loadLibrary("avformat-56");
+//        System.loadLibrary("avutil-54");
+//        System.loadLibrary("postproc-53");
+//        System.loadLibrary("swresample-1");
+//        System.loadLibrary("swscale-3");
+//        System.loadLibrary("ffmpeg_jni");
+
     }
 
     private SurfaceView surfaceView;
-    public   void playJava(String path) {
+
+    public void playJava(String path) {
         if (surfaceView == null) {
             return;
         }
@@ -41,17 +53,17 @@ public class Play  implements SurfaceHolder.Callback {
     public native void display(Surface surface);
 
 
-    public native void  release();
+    public native void release();
 
     public native void stop();
 
-   public native int getTotalTime();
+    public native int getTotalTime();
 
-   public native double getCurrentPosition();
+    public native double getCurrentPosition();
 
-   public native void seekTo(int msec);
+    public native void seekTo(int msec);
 
-   public native void stepBack();//快退
+    public native void stepBack();//快退
 
     public native void stepUp();//快进
 
