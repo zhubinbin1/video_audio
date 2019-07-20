@@ -58,12 +58,15 @@ void init() {
     LOGE("开启解码线程")
     //1.注册组件
     av_register_all();
+//    avcodec_register_all();
     avformat_network_init();
     //封装格式上下文
     pFormatCtx2 = avformat_alloc_context();
     LOGE( "inputPath %s",inputPath);
     //2.打开输入视频文件
-    if (avformat_open_input(&pFormatCtx2, inputPath, NULL, NULL) != 0) {
+    int errorCode = avformat_open_input(&pFormatCtx2, inputPath, NULL, NULL);
+    LOGE( "errorCode %i",errorCode);
+    if (errorCode != 0) {
         LOGE("%s", "打开输入视频文件失败");
     }
     //3.获取视频信息

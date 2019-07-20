@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void player(View view) {
+        //测试代码，测试前需要adb push
         File file = new File( Environment.getExternalStorageDirectory(), "source.mp4");//mnt/sdcard/source.mp4
 //           davidPlayer.playJava("http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4");
         davidPlayer.playJava(file.getAbsolutePath());
