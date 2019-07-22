@@ -43,6 +43,7 @@ Java_com_example_binbin_myapplication_ffmpegandroidaddmusic_MainActivity_addBgMu
 
     const char *out_filename = "/storage/emulated/0/pauseRecordDemo/video/wsAddMusic.mp4";//Output file URL
     av_register_all();
+    avformat_network_init();
     //Input
     if ((ret = avformat_open_input(&ifmt_ctx_v, in_filename_v, 0, 0)) < 0) {//打开输入的视频文件
         LOGE( "Could not open input file.");
@@ -270,9 +271,8 @@ Java_com_example_binbin_myapplication_ffmpegandroidaddmusic_MainActivity_addBgMu
 }
 
 
-jstring
-Java_com_ws_ffmpegandroidaddmusic_MainActivity_avcodecinfo(
-        JNIEnv *env, jobject) {
+JNIEXPORT jstring JNICALL
+Java_com_example_binbin_myapplication_ffmpegandroidaddmusic_MainActivity_avcodecinfo(JNIEnv *env, jobject) {
     char info[40000] = {0};
 
     av_register_all();

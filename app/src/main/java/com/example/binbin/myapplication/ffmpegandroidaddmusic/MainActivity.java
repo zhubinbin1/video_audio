@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public native int addBgMusci(String videoUrl, String musicUrl);
+    public native String avcodecinfo();
 
 }
 
