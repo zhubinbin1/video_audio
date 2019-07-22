@@ -207,6 +207,7 @@ void FFmpegMusic::stop() {
 }
 
 int FFmpegMusic::CreatePlayer() {
+
     LOGE("创建opnsl es播放器")
     //创建播放器
     SLresult result;

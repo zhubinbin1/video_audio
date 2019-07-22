@@ -60,7 +60,7 @@ AVFilterGraph *filter_graph2;
 
 JNIEXPORT jint JNICALL
 Java_com_example_binbin_myapplication_ffmpegandroidavfilter_MainActivity_play
-        (JNIEnv *env, jclass clazz, jobject surface) {
+        (JNIEnv *env, jobject instance, jobject surface) {
     LOGD("play");
 
     // sd卡中的视频文件地址,可自行修改或者通过jni传入

@@ -13,7 +13,7 @@ extern "C" {
 #endif
 
 JNIEXPORT jint JNICALL Java_com_example_binbin_myapplication_ffmpegandroidavfilter_MainActivity_play
-        (JNIEnv *, jclass, jobject);
+        (JNIEnv *, jobject , jobject);
 
 #ifdef __cplusplus
 }

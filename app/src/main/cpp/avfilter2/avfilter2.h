@@ -15,7 +15,7 @@ extern "C" {
 #endif
 
 JNIEXPORT jint JNICALL Java_com_example_binbin_myapplication_ffmpegandroidavfilter2_MainActivity_play
-        (JNIEnv *, jclass, jobject);
+        (JNIEnv *, jobject , jobject);
 JNIEXPORT void JNICALL
 Java_com_example_binbin_myapplication_ffmpegandroidavfilter2_MainActivity_playSound(JNIEnv *env, jobject instance, jstring input_);
 #ifdef __cplusplus

@@ -36,6 +36,7 @@ add_library( # Sets the name of the library.
              ${CPP_DIR}/video_play/FFmpegVideo.cpp
              ${CPP_DIR}/video_play/video_play.cpp
              ${CPP_DIR}/opensles/opensles.cpp
+#             ${CPP_DIR}/playmusic/play_music.cpp #和avfilter2.cpp相同
              )
 
 # Searches for a specified prebuilt library and stores the path as a

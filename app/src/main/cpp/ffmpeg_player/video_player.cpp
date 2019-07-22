@@ -20,7 +20,7 @@ extern "C"{
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 #define LOGE(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 JNIEXPORT jint JNICALL Java_com_example_binbin_myapplication_playffmpeg_VideoPlayer_play
-        (JNIEnv *env, jclass, jobject surface,jstring filename){
+        (JNIEnv *env, jobject surface,jstring filename){
     LOGD("play");
     // sd卡中的视频文件地址,可自行修改或者通过jni传入
 //    char *file_name = "/storage/emulated/0/Tencent/QQfile_recv/video.mp4";
