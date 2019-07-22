@@ -194,6 +194,7 @@ Java_com_example_binbin_myapplication_ffmpegvideoplay_Play_play(JNIEnv *env, job
     ffmpegVideo->setPlayCall(call_video_play);
     pthread_create(&p_tid, NULL, begin, NULL);//开启begin线程
     env->ReleaseStringUTFChars(inputPath_, inputPath);
+    return (jint) 0;
 }
 extern "C"
 JNIEXPORT void JNICALL
