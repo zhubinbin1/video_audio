@@ -29,7 +29,7 @@ public class PlayerView extends SurfaceView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        if (aspectRatio > 0) {
+        if (aspectRatio > 0) {//横屏
             int initialWidth = MeasureSpec.getSize(widthMeasureSpec);
             int initialHeight = MeasureSpec.getSize(heightMeasureSpec);
 

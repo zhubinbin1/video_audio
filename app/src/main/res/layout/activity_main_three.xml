@@ -27,5 +27,5 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zth.three.audiovideosample.MainActivity"
+    tools:context=".seven.MainActivity"
     tools:ignore="MergeRootFrame" />
